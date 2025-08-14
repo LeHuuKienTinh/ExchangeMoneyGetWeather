@@ -87,7 +87,7 @@ async function loadWeatherFromTo(
 ) {
   try {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=b4ffd155284443eebac42057251408&q=${location}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=b4ffd155284443eebac42057251408&q=${location}&aqi=no`
     )
     if (!res.ok) throw new Error('Failed to fetch currency list')
     const data = await res.json()
