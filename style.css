@@ -8,14 +8,12 @@
 
 body {
   background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
-  min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .container-wrapper {
   width: 100%;
-  height: 50vh;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -47,7 +45,7 @@ body {
   box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);
   max-width: 500px;
   width: 100%;
-  height: 300px; /* Chiều cao cố định */
+  min-height: 200px;
   text-align: center;
 }
 
@@ -77,14 +75,13 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    height: 80vh;
   }
 
   .container,
   .container-weather {
     padding: 2rem 1.5rem;
     max-width: 70%;
-    height: 350px; /* Chiều cao đồng bộ cho tablet */
+    min-height: 200px;
   }
 
   .container-weather {
@@ -161,7 +158,7 @@ body {
   .container-weather {
     padding: 2.5rem 2rem;
     max-width: 95%;
-    height: 300px; /* Chiều cao đồng bộ cho mobile */
+    min-height: 200px;
   }
 
   .input-group {
@@ -200,6 +197,13 @@ body {
   .time-update {
     margin-top: 1rem;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 392px) {
+  .title-app {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
