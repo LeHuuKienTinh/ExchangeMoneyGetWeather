@@ -9,6 +9,7 @@ document
     const amount = parseFloat(document.getElementById('amount').value)
 
     const from = document.getElementById('from-currency').value
+    console.log("from ne",from)
     getCapitalBiggest(
       from,
       'weather-from',
@@ -85,13 +86,14 @@ async function loadWeatherFromTo(
   idDetail,
   idTimeUpdate
 ) {
+  //GET THE CAPITAL
   try {
     const res = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=b4ffd155284443eebac42057251408&q=${location}&aqi=no`
     )
     if (!res.ok) throw new Error('Failed to fetch currency list')
     const data = await res.json()
-    const temp_c = data.current.temp_c
+    const temp_c = data.current.temp_c  
     document.getElementById(`${idEl}`).textContent = temp_c + '°C'
     document.getElementById(`${idCap}`).textContent = data.location.name
     document.getElementById(`${idImg}`).src = data.current.condition.icon
