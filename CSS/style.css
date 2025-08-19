@@ -9,7 +9,7 @@
 body {
   background: linear-gradient(135deg, #74ebd5 0%, #7b87bb 100%);
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 110vh;
 }
 
 .container-wrapper {
